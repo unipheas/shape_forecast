@@ -7,14 +7,19 @@
 //
 
 import Foundation
+import Client
+import Entities
 
 protocol FindLocationPresenterOutput: class {
 }
 
 final class FindLocationPresenter {
     weak var output: FindLocationPresenterOutput!
+    
 }
 
 extension FindLocationPresenter: FindLocationInteractorOutput {
-    
+    func showForecast(for result: Result<CurrentWeather, Client.Error>) {
+        print("From presenter: \(result)")
+    }
 }

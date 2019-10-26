@@ -9,6 +9,7 @@
 import MapKit
 import API
 import Entities
+import CoreLocation
 
 protocol FindLocationInteractorOutput: class {
 }
@@ -30,17 +31,8 @@ final class FindLocationInteractor {
 }
 
 extension FindLocationInteractor: FindLocationViewControllerOutput {
-    func viewIsReady() {
-        // Request example to load the current weather with a query
-        // Documentation for using the OpenWeatherAPI, is available at https://openweathermap.org/api
-        api.perform(CurrentWeather.getCurrent(for: "london,uk")) { (result) in
-            print("""
-            --- EXAMPLE
-            --- Current weather for location "London, UK"
-            """)
-            dump(result)
-            print("--- END OF EXAMPLE ---")
-        }
+    func viewIsReady(at coordinate: CLLocationCoordinate2D) {
+        action.locationSelected(at: coordinate)
     }
     
     func locationSelected(at coordinate: CLLocationCoordinate2D) {

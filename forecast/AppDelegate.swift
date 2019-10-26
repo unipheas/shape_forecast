@@ -14,9 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let client = ForecastClient(appId: "<your-AppId-goes-here>")
+        let client = ForecastClient(appId: "9bca04561bc6c337ab4854b4ea35fd17")
+        
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = FindLocationConfig.setup(api: client)

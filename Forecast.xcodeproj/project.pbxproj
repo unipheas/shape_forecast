@@ -93,7 +93,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3689B1CA221BE67C00E50ED5 /* forecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = forecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3689B1CA221BE67C00E50ED5 /* Forecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3689B1CD221BE67C00E50ED5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3689B1D2221BE67C00E50ED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3689B1D4221BE67E00E50ED5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -175,7 +175,7 @@
 		3689B1CB221BE67C00E50ED5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3689B1CA221BE67C00E50ED5 /* forecast.app */,
+				3689B1CA221BE67C00E50ED5 /* Forecast.app */,
 				3689B1F1221BF51600E50ED5 /* API.framework */,
 				3689B204221BF5F000E50ED5 /* Client.framework */,
 				3689B224221C03BB00E50ED5 /* Entities.framework */,
@@ -308,9 +308,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3689B1C9221BE67C00E50ED5 /* forecast */ = {
+		3689B1C9221BE67C00E50ED5 /* Forecast */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3689B1DC221BE67E00E50ED5 /* Build configuration list for PBXNativeTarget "forecast" */;
+			buildConfigurationList = 3689B1DC221BE67E00E50ED5 /* Build configuration list for PBXNativeTarget "Forecast" */;
 			buildPhases = (
 				3689B1C6221BE67C00E50ED5 /* Sources */,
 				3689B1C7221BE67C00E50ED5 /* Frameworks */,
@@ -324,9 +324,9 @@
 				3689B20A221BF5F000E50ED5 /* PBXTargetDependency */,
 				3689B22A221C03BB00E50ED5 /* PBXTargetDependency */,
 			);
-			name = forecast;
+			name = Forecast;
 			productName = forecast;
-			productReference = 3689B1CA221BE67C00E50ED5 /* forecast.app */;
+			productReference = 3689B1CA221BE67C00E50ED5 /* Forecast.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3689B1F0221BF51600E50ED5 /* API */ = {
@@ -413,7 +413,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3689B1C5221BE67C00E50ED5 /* Build configuration list for PBXProject "forecast" */;
+			buildConfigurationList = 3689B1C5221BE67C00E50ED5 /* Build configuration list for PBXProject "Forecast" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -426,7 +426,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3689B1C9221BE67C00E50ED5 /* forecast */,
+				3689B1C9221BE67C00E50ED5 /* Forecast */,
 				3689B1F0221BF51600E50ED5 /* API */,
 				3689B203221BF5F000E50ED5 /* Client */,
 				3689B223221C03BB00E50ED5 /* Entities */,
@@ -685,15 +685,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29J6W54RW6;
 				INFOPLIST_FILE = forecast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.titanianinc.forecast;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Forecast;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -705,15 +706,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29J6W54RW6;
 				INFOPLIST_FILE = forecast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.titanianinc.forecast;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Forecast;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -899,7 +901,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3689B1C5221BE67C00E50ED5 /* Build configuration list for PBXProject "forecast" */ = {
+		3689B1C5221BE67C00E50ED5 /* Build configuration list for PBXProject "Forecast" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3689B1DA221BE67E00E50ED5 /* Debug */,
@@ -908,7 +910,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3689B1DC221BE67E00E50ED5 /* Build configuration list for PBXNativeTarget "forecast" */ = {
+		3689B1DC221BE67E00E50ED5 /* Build configuration list for PBXNativeTarget "Forecast" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3689B1DD221BE67E00E50ED5 /* Debug */,

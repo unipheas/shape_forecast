@@ -10,11 +10,11 @@ import Entities
 import Client
 
 extension CurrentWeather {
-    public static func getCurrent(for query: String) -> Request<CurrentWeather, APIError> {
+    public static func getCurrent(_ lat: String,_ lon: String) -> Request<CurrentWeather, APIError> {
         return Request(
-            url: URL(string: "weather")!,
+            url: URL(string: "forecast")!,
             method: .get,
-            parameters: [QueryParameters([URLQueryItem(name: "q", value: query)])],
+            parameters: [QueryParameters([URLQueryItem(name: "lat", value: lat), URLQueryItem(name: "lon", value: lon)])],
             resource: decodeResource(CurrentWeather.self),
             error: APIError.init,
             needsAuthorization: true
