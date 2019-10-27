@@ -27,7 +27,6 @@ final class FindLocationRouter {
 
 extension FindLocationRouter: FindLocationInteractorAction {
     func locationSelected(at coordinate: CLLocationCoordinate2D) {
-        
         api.perform(CurrentWeather.getCurrent(String(coordinate.latitude), String(coordinate.longitude)), completion: { result in
             self.output.sendResultsToInteractor(for: result)
         })

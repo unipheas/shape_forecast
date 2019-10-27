@@ -33,6 +33,7 @@ final class FindLocationViewController: UIViewController, CLLocationManagerDeleg
             locationManager.startUpdatingLocation()
         }
         else{
+            // TODO: Display issue to user and ask for permission again
             print("Location service disabled");
         }
         
@@ -68,6 +69,7 @@ final class FindLocationViewController: UIViewController, CLLocationManagerDeleg
     }
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        // TODO: Display issue to user and ask for permission again
         print("Failed to find user's location: \(error.localizedDescription)")
     }
     
@@ -99,7 +101,38 @@ final class FindLocationViewController: UIViewController, CLLocationManagerDeleg
     
 }
 
-extension FindLocationViewController: FindLocationPresenterOutput {}
+extension FindLocationViewController: FindLocationPresenterOutput {
+    func presentForecast(_ forecastView: UIView) {
+        
+        // Checks for previous view and deletes
+        if mapView.subviews.count > 1 {
+            let viewToRemove = mapView.subviews[mapView.subviews.count - 1]
+            viewToRemove.removeFromSuperview()
+        }
+        
+        // Adds background with blur effect to newly constructed view
+        let blurEffect = UIBlurEffect(style: .light)
+        let effectView = UIVisualEffectView(effect: blurEffect)
+        effectView.frame = mapView.frame
+        effectView.translatesAutoresizingMaskIntoConstraints = false
+        effectView.layer.cornerRadius = 5;
+        effectView.layer.masksToBounds = true;
+        mapView.addSubview(effectView)
+        effectView.alpha = 0
+        UIView.animate(withDuration: 2.0) { effectView.alpha = 0.8 }
+        
+        // Adds constructed view to map view
+        mapView.addSubview(forecastView)
+        
+        // Sets constraints for new views
+        NSLayoutConstraint.activate([
+            effectView.topAnchor.constraint(equalTo: forecastView.layoutMarginsGuide.topAnchor),
+            effectView.leadingAnchor.constraint(equalTo: forecastView.layoutMarginsGuide.leadingAnchor),
+            effectView.trailingAnchor.constraint(equalTo: mapView.layoutMarginsGuide.trailingAnchor, constant: -100),
+            effectView.heightAnchor.constraint(equalToConstant: 100)
+        ])
+    }
+}
 
 // Setup gesture recognizer to add new pins on map on each touch
 extension FindLocationViewController: UIGestureRecognizerDelegate {
