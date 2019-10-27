@@ -44,6 +44,7 @@ extension FindLocationPresenter: FindLocationInteractorOutput {
                 
                 let finalMeasurement = MeasurementFormatter()
                 finalMeasurement.unitOptions = .providedUnit
+                finalMeasurement.numberFormatter.maximumSignificantDigits = 2
                 let temp = finalMeasurement.string(from: temperature)
                 
                 let tempLabel = UILabel()

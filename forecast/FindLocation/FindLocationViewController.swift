@@ -56,6 +56,8 @@ final class FindLocationViewController: UIViewController, CLLocationManagerDeleg
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
+            // Stop location manager from updating
+           locationManager.stopUpdatingLocation()
             
             // Convert CLLocation to CLLocationCoordinate2D
             let locationCoordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
@@ -128,7 +130,7 @@ extension FindLocationViewController: FindLocationPresenterOutput {
         NSLayoutConstraint.activate([
             effectView.topAnchor.constraint(equalTo: forecastView.layoutMarginsGuide.topAnchor),
             effectView.leadingAnchor.constraint(equalTo: forecastView.layoutMarginsGuide.leadingAnchor),
-            effectView.trailingAnchor.constraint(equalTo: mapView.layoutMarginsGuide.trailingAnchor, constant: -100),
+            effectView.trailingAnchor.constraint(equalTo: mapView.layoutMarginsGuide.trailingAnchor, constant: -8),
             effectView.heightAnchor.constraint(equalToConstant: 100)
         ])
     }

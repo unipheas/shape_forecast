@@ -17,7 +17,7 @@
                BlueprintIdentifier = "3689B1C9221BE67C00E50ED5"
                BuildableName = "Forecast.app"
                BlueprintName = "Forecast"
-               ReferencedContainer = "container:forecast.xcodeproj">
+               ReferencedContainer = "container:Forecast.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,11 +47,11 @@
             BlueprintIdentifier = "3689B1C9221BE67C00E50ED5"
             BuildableName = "Forecast.app"
             BlueprintName = "Forecast"
-            ReferencedContainer = "container:forecast.xcodeproj">
+            ReferencedContainer = "container:Forecast.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <LocationScenarioReference
-         identifier = "Hong Kong, China"
+         identifier = "com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier"
          referenceType = "1">
       </LocationScenarioReference>
    </LaunchAction>
@@ -68,7 +68,7 @@
             BlueprintIdentifier = "3689B1C9221BE67C00E50ED5"
             BuildableName = "Forecast.app"
             BlueprintName = "Forecast"
-            ReferencedContainer = "container:forecast.xcodeproj">
+            ReferencedContainer = "container:Forecast.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
