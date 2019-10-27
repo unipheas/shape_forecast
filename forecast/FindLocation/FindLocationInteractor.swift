@@ -9,9 +9,11 @@
 import MapKit
 import API
 import Entities
+import Client
 import CoreLocation
 
 protocol FindLocationInteractorOutput: class {
+    func setupForecast(for result: Result<CurrentWeather, Client.Error>)
 }
 
 protocol FindLocationInteractorAction: class {
@@ -28,6 +30,7 @@ final class FindLocationInteractor {
     init(api apiClient: ForecastClient) {
         self.api = apiClient
     }
+    
 }
 
 extension FindLocationInteractor: FindLocationViewControllerOutput {
@@ -39,3 +42,10 @@ extension FindLocationInteractor: FindLocationViewControllerOutput {
         action.locationSelected(at: coordinate)
     }
 }
+
+extension FindLocationInteractor: FindLocationRouterOutput {
+    func sendResultsToInteractor(for results: Result<CurrentWeather, Client.Error>) {
+        output.setupForecast(for: results)
+    }
+}
+

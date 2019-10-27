@@ -11,6 +11,7 @@ import Client
 import Entities
 
 protocol FindLocationPresenterOutput: class {
+    
 }
 
 final class FindLocationPresenter {
@@ -19,7 +20,9 @@ final class FindLocationPresenter {
 }
 
 extension FindLocationPresenter: FindLocationInteractorOutput {
-    func showForecast(for result: Result<CurrentWeather, Client.Error>) {
-        print("From presenter: \(result)")
+    func setupForecast(for result: Result<CurrentWeather, Client.Error>) {
+        if let result = result.value {
+            
+        }
     }
 }
